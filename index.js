@@ -1,22 +1,22 @@
 form = 
 [
 {
-    label:'First Name *',
+    label:'First Name',
     type:'text',
     isRequired:false
 },
 {
-    label:'last Name *',
+    label:'last Name',
     type:'text',
-    isRequired:false
+    isRequired:true
 },
 {
     label:'Email *',
     type:'mail',
-    isRequired:false
+    isRequired:true
 },
 {
-    label:'Mobile Number *',
+    label:'Mobile Number',
     type:'number',
     isRequired:false
 }
@@ -26,7 +26,7 @@ h1.innerHTML='My first form in life with the help of Javascript.<br><i>Prepared 
 h1.style.color='white'
 h1.style.borderBottom='4px dotted green'
 //h1.style.fontFamily='sansSerif'
-document.body.append(h1)
+document.body.prepend(h1)
 const firstForm = document.getElementById("form");
 const formElement = document.createElement("form");
 form.forEach(field => {
@@ -39,7 +39,9 @@ form.forEach(field => {
     label.style.fontFamily='sansSerif'
     const input = document.createElement("input");
     input.type = field.type;
-    input.style.padding = '8px 80px 8px 5px';
+    input.style.padding = '12px 25px 12px 4px';
+    
+    input.style.width='100%'
     input.style.color='white'
     input.style.borderRadius='7px'
     input.style.border='none'
@@ -77,8 +79,13 @@ document.body.style.justifyContent='center'
 document.body.style.position='relative'
 document.body.style.marginLeft='20%'
 document.body.style.marginRight='20%'
-document.body.style.marginTop='15%'
+document.body.style.marginTop='5%'
 document.body.style.background='rgba(12, 0, 0, 0.87)'
 btn.addEventListener('click' , function(){
     console.log('clicked me')
 })
+/*
+const div = document.createElement('div');
+div.append('Hello', 'World');
+console.log(div);*/
+//div.appendChild("Hello");
